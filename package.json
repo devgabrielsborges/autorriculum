@@ -1,0 +1,29 @@
+{
+  "name": "autorriculum",
+  "version": "1.0.0",
+  "description": "LLM based application for creating CVs based on your GitHub and LinkedIn profile",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devgabrielsborges/autorriculum.git"
+  },
+  "author": "gabrielsborges",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devgabrielsborges/autorriculum/issues"
+  },
+  "homepage": "https://github.com/devgabrielsborges/autorriculum#readme",
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "playwright": "^1.54.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1"
+  }
+}
