@@ -7,15 +7,16 @@ dotenv.config();
 const STATE_FILE = 'state.json';
 
 (async () => {
-  const username = process.env.LINKEDIN_USERNAME;
+  const email = process.env.LINKEDIN_EMAIL;
   const password = process.env.LINKEDIN_PASSWORD;
+  const username = process.env.LINKEDIN_USERNAME;
 
-  if (!username || !password) {
+  if (!username || !password || !email) {
     console.error('Missing LinkedIn username or password in .env file');
     return;
   }
 
-  const browser = await chromium.launch({ headless: false });
+  const browser = await chromium.launch({ headless: true });
   let context;
 
   if (fs.existsSync(STATE_FILE)) {
@@ -29,7 +30,7 @@ const STATE_FILE = 'state.json';
     await page.click('[data-tracking-control-name="guest_homepage-basic_nav-header-signin"]');
     
     await page.waitForSelector('#username');
-    await page.type('#username', username);
+    await page.type('#username', email);
     await page.type('#password', password);
     await page.click('button[type="submit"][aria-label="Sign in"]');
 
@@ -43,7 +44,7 @@ const STATE_FILE = 'state.json';
   }
 
   const page = await context.newPage();
-  await page.goto('https://www.linkedin.com/in/devgabrielsborges/');
+  await page.goto(`https://www.linkedin.com/in/${username}/`);
 
   await page.waitForSelector('main');
   await new Promise(resolve => setTimeout(resolve, 3000));
@@ -57,6 +58,5 @@ const STATE_FILE = 'state.json';
   await download.saveAs('profile.pdf');
   console.log('Profile saved as profile.pdf');
 
-  await new Promise(resolve => setTimeout(resolve, 5000)); // Keep browser open to see result
   await browser.close();
 })();
