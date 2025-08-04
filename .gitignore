@@ -83,7 +83,6 @@ out
 
 # Nuxt.js build output
 .nuxt
-dist
 
 # Docusaurus build output
 .docusaurus
