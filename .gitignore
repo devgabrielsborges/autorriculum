@@ -111,3 +111,6 @@ src/**/*.js
 src/**/*.js.map
 
 path.txt
+
+samples/
+ideas/
