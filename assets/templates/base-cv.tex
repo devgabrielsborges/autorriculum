@@ -1,0 +1,194 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template de Currículo Profissional
+%
+% Autor: Seu Nome
+% Baseado em pesquisas sobre currículos eficazes e ATS-friendly.
+%
+% Este template é projetado para ser:
+% - Limpo e profissional
+% - Facilmente legível por recrutadores e sistemas ATS
+% - Simples de personalizar
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	CONFIGURAÇÕES DO DOCUMENTO
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+% --- PACOTES ESSENCIAIS ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern} % Fonte moderna
+\usepackage{geometry} % Para ajustar as margens
+\usepackage{hyperref} % Para links clicáveis (email, websites)
+\usepackage{fontawesome5} % Para ícones (LinkedIn, GitHub, etc.)
+\usepackage{titlesec}   % Para personalizar títulos de secção
+\usepackage{enumitem}   % Para personalizar listas
+
+% --- CONFIGURAÇÃO DAS MARGENS ---
+% Margens generosas para uma boa legibilidade
+\geometry{
+    a4paper,
+    left=2cm,
+    right=2cm,
+    top=2cm,
+    bottom=2cm
+}
+
+% --- CONFIGURAÇÃO DE CORES E LINKS ---
+\usepackage{xcolor}
+\definecolor{linkcolor}{rgb}{0.0, 0.42, 0.72} % Cor azul para links
+\hypersetup{
+    colorlinks=true,
+    urlcolor=linkcolor,
+    linkcolor=linkcolor,
+}
+
+% --- REMOVER NÚMERO DA PÁGINA ---
+\pagestyle{empty}
+
+% --- CONFIGURAÇÃO DOS TÍTULOS DAS SECÇÕES ---
+% Define um estilo limpo para as secções, com uma linha por baixo
+\titleformat{\section}{
+  \vspace{8pt} % Espaço antes do título
+  \scshape\Large % Letras maiúsculas pequenas, tamanho grande
+}{}{0em}{}[\titlerule] % Linha horizontal após o título
+\titlespacing{\section}{0pt}{10pt}{5pt} % Espaçamento: esquerda, antes, depois
+
+% --- COMANDO PERSONALIZADO PARA ENTRADA DE EXPERIÊNCIA/EDUCAÇÃO ---
+% Isso garante consistência na formatação
+\newcommand{\resumeEntry}[4]{
+  \vspace{4pt}
+  \textbf{#1} \hfill \textit{#2} \\
+  \textit{#3} \hfill \textit{#4} \\
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	CABEÇALHO - SEUS DADOS
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+    {\Huge \scshape SEU NOME COMPLETO} % Seu nome em destaque
+    \vspace{6pt}
+
+    % --- Informações de Contato com Ícones ---
+    % Use \faIcon{icon-name} para os ícones. Ex: github, linkedin, envelope
+    \small
+    \faIcon{map-marker-alt} Sua Cidade, Estado \quad%
+    \href{mailto:seu.email@profissional.com}{\faIcon{envelope} seu.email@profissional.com} \quad%
+    \href{https://www.linkedin.com/in/seu-perfil}{\faIcon{linkedin} /seu-perfil} \quad%
+    \href{https://github.com/seu-usuario}{\faIcon{github} /seu-usuario}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%	RESUMO PROFISSIONAL
+%----------------------------------------------------------------------------------------
+
+\section{Resumo Profissional}
+\vspace{2pt}
+% Um parágrafo curto (3-4 linhas) que resume sua experiência, suas principais competências e seu objetivo de carreira.
+% Adapte este texto para cada vaga à qual se candidatar.
+Desenvolvedor de Software com X anos de experiência, especializado em [Sua Especialidade, ex: desenvolvimento Back-End com Node.js]. Possuo forte conhecimento em [Tecnologia 1] e [Tecnologia 2], com histórico comprovado em [Sua maior conquista, ex: otimização de sistemas e redução de latência em 40%]. Busco uma oportunidade desafiadora para aplicar minhas habilidades em [Área de Interesse].
+
+%----------------------------------------------------------------------------------------
+%	COMPETÊNCIAS TÉCNICAS
+%----------------------------------------------------------------------------------------
+
+\section{Competências Técnicas}
+\begin{itemize}[leftmargin=*, label={}]
+    \item \textbf{Linguagens:} JavaScript, TypeScript, Python, Java, C
+    \item \textbf{Back-End:} Node.js, Express.js, NestJS, Spring Boot
+    \item \textbf{Front-End:} React, Angular, Vue.js, HTML5, CSS3
+    \item \textbf{Bancos de Dados:} PostgreSQL, MongoDB, Redis, MySQL
+    \item \textbf{Cloud \& DevOps:} AWS (EC2, S3, Lambda), Docker, Kubernetes, Jenkins, Git
+    \item \textbf{Outras Ferramentas:} Metodologias Ágeis (Scrum, Kanban), Jest, Postman
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIÊNCIA PROFISSIONAL
+%----------------------------------------------------------------------------------------
+
+\section{Experiência Profissional}
+
+\resumeEntry
+  {Seu Cargo Mais Recente} % Cargo
+  {Nome da Empresa} % Empresa
+  {Cidade, Estado} % Localização
+  {Mês, Ano – Presente} % Período
+
+\begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt]
+    \item Descreva aqui sua principal conquista, usando verbos de ação e quantificando o resultado. Ex: Liderei o desenvolvimento de uma nova arquitetura de microsserviços, o que reduziu o tempo de deploy em 50\%.
+    \item Outra conquista mensurável. Ex: Otimizei consultas em PostgreSQL e implementei cache com Redis, resultando em uma diminuição de 60\% no tempo de resposta de APIs críticas.
+    \item Mais uma responsabilidade ou conquista. Ex: Desenvolvi e mantive pipelines de CI/CD com GitHub Actions, automatizando testes e deployments.
+\end{itemize}
+
+\resumeEntry
+  {Seu Cargo Anterior} % Cargo
+  {Nome da Empresa Anterior} % Empresa
+  {Cidade, Estado} % Localização
+  {Mês, Ano – Mês, Ano} % Período
+
+\begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt]
+    \item Conquista ou responsabilidade. Ex: Desenvolvi e mantive APIs RESTful com Node.js e Express para um sistema de gestão de clientes (CRM).
+    \item Conquista ou responsabilidade. Ex: Participei da migração de um sistema monolítico para uma arquitetura baseada em serviços, utilizando Docker.
+    \item Conquista ou responsabilidade. Ex: Criei testes unitários e de integração com Jest, aumentando a cobertura de testes do módulo de 40\% para 85\%.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	PROJETOS
+%----------------------------------------------------------------------------------------
+
+\section{Projetos}
+
+\resumeEntry
+  {Nome do Projeto 1} % Nome do Projeto
+  {\href{https://github.com/seu-usuario/seu-projeto}{github.com/seu-usuario/seu-projeto}} % Link
+  {} % Localização (pode deixar em branco)
+  {Ano} % Período
+
+\begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt]
+    \item \textbf{Descrição:} Uma breve descrição do projeto, o problema que ele resolve e o seu papel.
+    \item \textbf{Tecnologias:} Liste as tecnologias, frameworks e ferramentas que você utilizou.
+\end{itemize}
+
+\resumeEntry
+  {Nome do Projeto 2} % Nome do Projeto
+  {\href{https://github.com/seu-usuario/seu-projeto-2}{github.com/seu-usuario/seu-projeto-2}} % Link
+  {} % Localização (pode deixar em branco)
+  {Ano} % Período
+
+\begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt]
+    \item \textbf{Descrição:} Uma breve descrição do projeto, o problema que ele resolve e o seu papel.
+    \item \textbf{Tecnologias:} Liste as tecnologias, frameworks e ferramentas que você utilizou.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	FORMAÇÃO ACADÊMICA
+%----------------------------------------------------------------------------------------
+
+\section{Formação Acadêmica}
+
+\resumeEntry
+  {Seu Curso Superior} % Curso
+  {Nome da Universidade} % Instituição
+  {Cidade, Estado} % Localização
+  {Ano de Conclusão ou Previsão} % Período
+
+%----------------------------------------------------------------------------------------
+%	IDIOMAS E CERTIFICAÇÕES
+%----------------------------------------------------------------------------------------
+
+\section{Idiomas e Certificações}
+\begin{itemize}[leftmargin=*, label={}]
+    \item \textbf{Português:} Nativo
+    \item \textbf{Inglês:} Avançado / Fluente
+    \item \textbf{Nome da Certificação 1} - Instituição Certificadora (Ano)
+    \item \textbf{Nome da Certificação 2} - Instituição Certificadora (Ano)
+\end{itemize}
+
+\end{document}
