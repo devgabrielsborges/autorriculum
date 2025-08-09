@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --env-file=.env -r ts-node/register src/index.ts || ts-node src/index.ts",
     "build": "tsc",
-    "generate-cv": "ts-node src/index.ts"
+    "generate-cv": "ts-node src/index.ts",
+    "collect-github": "node --env-file=.env -r ts-node/register scripts/github_data_collector.ts",
+    "linkedin-cv": "node --env-file=.env -r ts-node/register scripts/linkedin_scraping.ts"
   },
   "repository": {
     "type": "git",
