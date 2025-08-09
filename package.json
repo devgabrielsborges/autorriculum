@@ -9,7 +9,9 @@
     "build": "tsc",
     "generate-cv": "ts-node src/index.ts",
     "collect-github": "node --env-file=.env -r ts-node/register scripts/github_data_collector.ts",
-    "linkedin-cv": "node --env-file=.env -r ts-node/register scripts/linkedin_scraping.ts"
+    "linkedin-cv": "node --env-file=.env -r ts-node/register scripts/linkedin_scraping.ts",
+    "extract-pdf": "ts-node scripts/pdf_data_extractor.ts",
+    "preview-pdf": "ts-node scripts/pdf_data_extractor.ts --preview"
   },
   "repository": {
     "type": "git",
@@ -26,5 +28,9 @@
     "playwright": "^1.54.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@types/pdf-parse": "^1.1.5",
+    "pdf-parse": "^1.1.1"
   }
 }
