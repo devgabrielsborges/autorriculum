@@ -1,8 +1,5 @@
 import { chromium } from 'playwright';
 import * as fs from 'fs';
-import * as dotenv from 'dotenv';
-
-dotenv.config();
 
 const STATE_FILE = 'state.json';
 
@@ -16,7 +13,7 @@ const STATE_FILE = 'state.json';
     return;
   }
 
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({ headless: false });
   let context;
 
   if (fs.existsSync(STATE_FILE)) {
