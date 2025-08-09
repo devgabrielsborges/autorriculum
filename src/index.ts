@@ -86,8 +86,8 @@ PROFILE DATA:
 ${JSON.stringify(this.profileData, null, 2)}
 
 INSTRUCTIONS:
-1. Use the template structure from base-cv.tex, follow it structure, do not change the core
-2. Fill in all sections with relevant information from the profile data
+1. Use the template structure from base-cv.tex, follow it structure, do not change the core. if you want to add some topic, add it below the existing ones
+2. Fill in all sections with relevant information from the profile data, do not use fictional data
 3. For the header, extract name from the json
 4. Create a professional summary based on the facts and experience
 5. Map programming languages to technical skills section
@@ -99,10 +99,16 @@ INSTRUCTIONS:
 11. Use Brazilian Portuguese for section headers but technical terms in English
 12. Ensure all URLs and links are properly formatted
 
+LATEX COMPATIBILITY REQUIREMENTS:
+- DO NOT use \\usepackage{fontspec} or \\setmainfont commands
+- Use only pdflatex-compatible packages like: geometry, hyperref, xcolor, enumitem, titlesec
+- The document MUST compile with pdflatex, not xelatex or lualatex
+- Use \\usepackage[T1]{fontenc} and \\usepackage[utf8]{inputenc} for proper encoding
+
 IMPORTANT: Return ONLY the raw LaTeX code, without any markdown formatting, code blocks, or explanations. 
 The response should start directly with \\documentclass and end with \\end{document}.
 
-Generate the complete LaTeX document, ready to compile.
+Generate the complete LaTeX document, ready to compile with pdflatex.
 `;
   }
 
