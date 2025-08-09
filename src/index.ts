@@ -176,6 +176,7 @@ Generate the complete LaTeX document, ready to compile.
             } else {
               console.log('⚠️  Second pass failed, but first pass succeeded');
               resolve();
+            }
           });
 
           secondPass.on('error', () => {
